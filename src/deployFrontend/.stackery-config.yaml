@@ -1,0 +1,2 @@
+function-id: deployFrontend
+template-path: ../../template.yaml
