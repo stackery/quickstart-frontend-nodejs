@@ -1,0 +1,55 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Serverless List App with Stackery</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="main.css">
+
+</head>
+<body>
+
+  <header class="site-header jumbotron">
+    <h1 class="title text-center">Serverless List App</h1>
+  </header>
+
+  <div class="container">
+    <section class="add">
+      <h2 class="section-title text-center">Add an item</h2>
+      <form>
+        <div class="form-group">
+          <label for="itemInput">Add item</label>
+          <input type="text" class="form-control" id="itemInput" placeholder="Add item">
+        </div>
+        <button id="submit" type="submit" class="btn btn-primary">Submit</button>
+      </form>
+      <p class="small"><span id="itemAdded"></span></p>
+    </section>
+    <section class="get">
+      <button id="getItems" type="submit" class="btn btn-lg btn-primary">Show Items!</button>
+    </section>
+    <section class="list">
+      <h2 class="section-title text-center">All items</h2>
+      <table class="table table-hover">
+          <thead>
+            <tr>
+              <th scope="col">Item ID</th>
+              <th scope="col">Item</th>
+              <th scope="col">Timestamp</th>
+            </tr>
+          </thead>
+          <tbody id="itemsTable">
+          </tbody>
+        </table>
+    </section>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="main.js"></script>
+</body>
+</html>

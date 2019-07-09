@@ -1,0 +1,33 @@
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+.jumbotron {
+  color: #fff;
+  background-color: #79CCB5;
+}
+
+.add, .get, .list {
+  margin-top: 10vh;
+}
+
+.get {
+  text-align: center;
+}
+
+.small {
+  margin-top: 10px;
+  color: #79CCB5;
+}
+
+.btn-primary {
+  background-color: #79CCB5;
+  border-color: #79CCB5;
+}
+
+.btn-primary:hover, .btn-primary:active {
+  background-color: #39ad8a !important;
+  border-color: #39ad8a !important;
+}
