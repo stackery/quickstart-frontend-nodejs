@@ -2,6 +2,7 @@
   "name": "function",
   "version": "1.0.0",
   "dependencies": {
-    "aws-sdk": "~2"
+    "aws-sdk": "~2",
+    "node-uuid": "^1.4.8"
   }
 }
