@@ -28,7 +28,9 @@ Resources:
               responses: {}
       EndpointConfiguration: REGIONAL
       TracingEnabled: true
-      Cors: '''*'''
+      Cors:
+        AllowHeaders: '''Authorization,Content-Type'''
+        AllowOrigin: '''*'''
   getItems:
     Type: AWS::Serverless::Function
     Properties:
