@@ -1,0 +1,3 @@
+# local build directories
+.aws-sam
+.stackery
