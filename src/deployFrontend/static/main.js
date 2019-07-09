@@ -13,7 +13,7 @@ $('#submit').click(function(e) {
 
   var ajaxRequest = $.ajax({
       type: "POST",
-      url: `${API_ENDPOINT}/new-item`,
+      url: `${API_ENDPOINT}/newItem`,
       data: JSON.stringify(inputData),
       contentType: "application/json",
       dataType: "text",
