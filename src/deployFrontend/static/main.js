@@ -1,5 +1,5 @@
 // Add your API endpoint
-const API_ENDPOINT = "https://q638nucor2.execute-api.us-east-2.amazonaws.com/local";
+const API_ENDPOINT = "https://76sa29vzca.execute-api.us-east-1.amazonaws.com/dev";
 const time = new Date();
 
 //AJAX POST
