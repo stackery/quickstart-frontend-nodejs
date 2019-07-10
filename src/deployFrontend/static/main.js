@@ -1,8 +1,8 @@
 // Add your API endpoint
-const API_ENDPOINT = "https://76sa29vzca.execute-api.us-east-1.amazonaws.com/dev";
+const API_ENDPOINT = "https://1234567890.execute-api.us-west-2.amazonaws.com/test;"
 const time = new Date();
 
-//AJAX POST
+// AJAX POST
 $('#submit').click(function(e) {
   e.preventDefault();
 
@@ -11,6 +11,7 @@ $('#submit').click(function(e) {
     "timestamp": time.toLocaleString()
     };
 
+  // Send an ajax request with the data entered into the form
   var ajaxRequest = $.ajax({
       type: "POST",
       url: `${API_ENDPOINT}/newItem`,
@@ -22,19 +23,19 @@ $('#submit').click(function(e) {
       }
     });
 
-  //When the request successfully finished, execute passed in function
+  // When the request successfully finished, execute passed in function
   ajaxRequest.done(function(response){
     document.getElementById("itemAdded").innerHTML = "Item Added!";
   });
 
-  //When the request failed, execute the passed in function
+  // When the request failed, execute the passed in function
   ajaxRequest.fail(function(jqXHR, status){
     alert(`Something went wrong: ${JSON.stringify(status)}`);
   });
 });
 
-//AJAX GET REQUEST
-$('#getItems').click(function (e) {
+// AJAX GET REQUEST
+$('#getItems').click(function (e) { // Show all items on button click
   e.preventDefault();
   $.ajax({
     url: `${API_ENDPOINT}/items`,
