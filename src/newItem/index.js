@@ -9,7 +9,7 @@ exports.handler = async event => {
     Item: {
       id: uuid.v1(),
       content: newEntry.content,
-      timestamp: newEntry.timestamp // modify content here
+      timestamp: newEntry.timestamp
     },
     ConditionExpression: 'attribute_not_exists(id)', // do not overwrite existing entries
     ReturnConsumedCapacity: 'TOTAL'
