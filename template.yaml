@@ -100,12 +100,6 @@ Resources:
       StreamSpecification:
         StreamViewType: NEW_AND_OLD_IMAGES
       TableName: !Sub ${AWS::StackName}-Items
-  FrontendHost:
-    Type: AWS::S3::Bucket
-    Properties:
-      BucketName: !Sub ${AWS::StackName}-frontendh-${AWS::AccountId}
-      WebsiteConfiguration:
-        IndexDocument: index.html
   deployFrontend:
     Type: AWS::Serverless::Function
     Properties:
@@ -122,16 +116,22 @@ Resources:
       Policies:
         - AWSXrayWriteOnlyAccess
         - S3CrudPolicy:
-            BucketName: !Ref FrontendHost
+            BucketName: !Ref Frontend
       Environment:
         Variables:
-          BUCKET_NAME: !Ref FrontendHost
-          BUCKET_ARN: !GetAtt FrontendHost.Arn
+          BUCKET_NAME: !Ref Frontend
+          BUCKET_ARN: !GetAtt Frontend.Arn
   deployFrontendDeployTrigger:
     Type: Custom::FunctionDeployTrigger
     Properties:
       ServiceToken: !GetAtt deployFrontend.Arn
       DeploymentTimestamp: !Ref DeploymentTimestamp
+  Frontend:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: !Sub ${AWS::StackName}-frontend-${AWS::AccountId}
+      WebsiteConfiguration:
+        IndexDocument: index.html
 Parameters:
   StackTagName:
     Type: String
