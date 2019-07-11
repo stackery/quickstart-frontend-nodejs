@@ -19,12 +19,12 @@ Resources:
         - DynamoDBCrudPolicy:
             TableName: !Ref Items
       Events:
-        QuickstartApiGETitems:
+        QuickstartAPIGETitems:
           Type: Api
           Properties:
             Path: /items
             Method: GET
-            RestApiId: !Ref QuickstartApi
+            RestApiId: !Ref QuickstartAPI
       Environment:
         Variables:
           TABLE_NAME: !Ref Items
@@ -47,12 +47,12 @@ Resources:
         - DynamoDBCrudPolicy:
             TableName: !Ref Items
       Events:
-        QuickstartApiPOSTnewItem:
+        QuickstartAPIPOSTnewItem:
           Type: Api
           Properties:
             Path: /newItem
             Method: POST
-            RestApiId: !Ref QuickstartApi
+            RestApiId: !Ref QuickstartAPI
       Environment:
         Variables:
           TABLE_NAME: !Ref Items
@@ -102,12 +102,12 @@ Resources:
       BucketName: !Sub ${AWS::StackName}-frontend-${AWS::AccountId}
       WebsiteConfiguration:
         IndexDocument: index.html
-  QuickstartApi:
+  QuickstartAPI:
     Type: AWS::Serverless::Api
     Properties:
       Name: !Sub
         - ${ResourceName} From Stack ${StackTagName} Environment ${EnvironmentTagName}
-        - ResourceName: QuickstartApi
+        - ResourceName: QuickstartAPI
       StageName: !Ref EnvironmentAPIGatewayStageName
       DefinitionBody:
         swagger: '2.0'
