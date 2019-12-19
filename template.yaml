@@ -10,7 +10,7 @@ Resources:
         - ResourceName: getItems
       CodeUri: src/getItems
       Handler: index.handler
-      Runtime: nodejs8.10
+      Runtime: nodejs12.x
       MemorySize: 3008
       Timeout: 300
       Tracing: Active
@@ -79,7 +79,7 @@ Resources:
         - ResourceName: deployFrontend
       CodeUri: src/deployFrontend
       Handler: index.handler
-      Runtime: nodejs8.10
+      Runtime: nodejs12.x
       MemorySize: 3008
       Timeout: 300
       Tracing: Active
