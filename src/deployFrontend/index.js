@@ -14,7 +14,7 @@ exports.handler = async message => {
     // Send success signal back to CloudFormation
     await cfnCR.sendSuccess('deployFrontend', {}, message);
 
-    console.log('Succeeded in uploading site content!')
+    console.log('Succeeded in uploading site content!');
   } catch (err) {
     console.error('Failed to upload site content:');
     console.error(err);
@@ -28,7 +28,7 @@ exports.handler = async message => {
 };
 
 // Upload site content from 'static' directory
-async function uploadStaticContent() {
+async function uploadStaticContent () {
   // List files in 'static' directory
   const files = await recursiveReaddir('static');
 

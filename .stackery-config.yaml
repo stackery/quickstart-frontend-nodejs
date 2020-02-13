@@ -1,1 +1,2 @@
 stack-name: quickstart-frontend-nodejs
+template-path: template.yaml

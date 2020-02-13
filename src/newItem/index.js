@@ -26,13 +26,13 @@ exports.handler = async event => {
 
   // Return a 200 response if no errors
   const response = {
-    statusCode: "200",
+    statusCode: '200',
     headers: {
-      "Content-Type": "application/json",
-      "Access-Control-Allow-Origin": "*"
+      'Content-Type': 'application/json',
+      'Access-Control-Allow-Origin': '*'
     },
-    body: "Success",
+    body: 'Success',
     isBase64Encoded: false
-  }
+  };
   return response;
 };
